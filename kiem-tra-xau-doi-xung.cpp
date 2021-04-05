@@ -40,6 +40,6 @@ int main()
         }
     }
     int i = res.length();
-    cout << i << " " << res[i/2] ;
+    cout << i << " " << res[i / 2] ;
     return 0;
 }
