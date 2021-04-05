@@ -1,7 +1,7 @@
+// Kiểm tra xem n có phải số nguyên tố hay không?
+
 #include <iostream>
-#include <cmath>
-#include <cstdlib>
-#include <ctime>
+#include <math.h>
 
 using namespace std;
 
@@ -13,9 +13,9 @@ int isPrimeNumber(int n)
         return 0;
     }
     // check so nguyen to khi n >= 2
-    int squareRoot = (int)sqrt(n);
+    int tmp = (int)sqrt(n);
     int i;
-    for (i = 2; i <= squareRoot; i++)
+    for (i = 2; i <= tmp; i++)
     {
         if (n % i == 0)
         {
@@ -27,17 +27,9 @@ int isPrimeNumber(int n)
 
 int main()
 {
-    long long i, n, k;
-    //vector <long long> vec;
-    cin >> k >> n;
-    cout << "Cac so nguyen to nho hon " << n << " va lon hon " << k << " la: " << endl;
-    for (i = k; i < n; i++)
-    {
-        if (isPrimeNumber(i))
-        {
-            cout << i << " ";
-        }
-    }
-
+    int n;
+    cin >> n;
+    if (isPrimeNumber(n)) cout << "YES";
+    else cout << "NO";
     return 0;
 }
